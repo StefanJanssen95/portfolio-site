@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Settings>
+    <Containers>
+        <Container>caddy</Container>
+        <Container>mysql</Container>
+    </Containers>
+    <DockerComposeLocation>../../portfolio_stefan_laradock</DockerComposeLocation>
+    <AfterDoneLocation>../../</AfterDoneLocation>
+</Settings>
