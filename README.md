@@ -9,6 +9,9 @@ Make sure the following are installed on your PC by calling the commands from yo
  - [Yarn](https://yarnpkg.com/en/) (`yarn --version`)
 
 ### First time setup
+From the root of the project run:
+ - On Windows: `scripts/powershell/setup-project`
+ - On Linux: `<NOT IMPLEMENTED YET>`
 
 ### Running the project
 
