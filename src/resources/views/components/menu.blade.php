@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        <li>Home</li>
+        <li>Knowledge</li>
+        <li>Projects</li>
+        <li>Contact</li>
+        <li>Blog</li>
+    </ul>
+</nav>
