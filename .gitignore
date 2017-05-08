@@ -10,3 +10,5 @@ src/Homestead.yaml
 src/npm-debug.log
 src/.env
 portfolio_laradock/logs
+
+.idea/
