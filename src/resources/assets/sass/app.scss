@@ -1,9 +1,18 @@
-// Normalize
-@import 'normalize';
-@import 'global';
+// Vendor
+@import 'vendor/normalize';
+//@import 'vendor/fontawesome/font-awesome';
 
 // Variables
 @import "variables";
 @import "breakpoints";
 
-@import "menu/_menu";
+// Global
+@import 'global';
+
+// Components
+@import "components/menu/menu";
+@import "components/ribbon/ribbon";
+
+
+// Pages
+@import "pages/about";

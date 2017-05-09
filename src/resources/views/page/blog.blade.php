@@ -1,7 +1,7 @@
 @extends('template.template')
 
 @section('content')
-
-Do some typing animation
-
+	@component('component.header-ribbon')
+		BLOG
+	@endcomponent
 @endsection

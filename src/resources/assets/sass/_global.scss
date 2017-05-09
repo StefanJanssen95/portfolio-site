@@ -6,3 +6,13 @@ html,body{
 *{
     box-sizing: border-box;
 }
+
+.container{
+    background-color: $blue-light;
+    padding: 50px;
+}
+
+
+.no-select{
+    user-select: none;
+}
