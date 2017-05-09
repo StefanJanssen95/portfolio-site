@@ -1,0 +1,27 @@
+.container--welcome{
+	background-image: url("../../img/background_typing.jpg");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.typewriter__title{
+	@include roboto('light');
+	color: $blanco;
+	font-size: 45px;
+	&--bold{
+		@include roboto('bold');
+	}
+	&:after{
+		content: "|";
+		animation: blinker 0.8s linear infinite;
+	}
+}
+
+@keyframes blinker {
+	0% { opacity: 1;}
+	49% { opacity: 1; }
+	50% { opacity: 0; }
+	99% { opacity: 0; }
+}

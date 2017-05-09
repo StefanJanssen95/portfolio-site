@@ -7,5 +7,12 @@ src/.idea
 src/.vagrant
 src/Homestead.json
 src/Homestead.yaml
-src/npm-debug.log
 src/.env
+src/public/css/
+src/public/js/
+
+
+portfolio_laradock/logs
+
+.idea/
+npm-debug.log
