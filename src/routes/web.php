@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('page.welcome');
+    return view('page.welcome', ["currentPage"=>"welcome"]);
 })->name('welcome');
 
 Route::get('/about', function () {
