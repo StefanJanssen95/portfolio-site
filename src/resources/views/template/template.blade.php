@@ -13,8 +13,6 @@
         @include('component.menu')
 
         <main class="container {{ Route::currentRouteName() == "welcome" ? "container--welcome" : "" }}">
-
-            {{ Route::currentRouteName() }}
             @yield('content')
         </main>
     </body>

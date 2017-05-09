@@ -2,9 +2,10 @@
 @import 'vendor/normalize';
 //@import 'vendor/fontawesome/font-awesome';
 
-// Variables
+// Variables and mixins
 @import "variables";
 @import "breakpoints";
+@import "fonts";
 
 // Global
 @import 'global';

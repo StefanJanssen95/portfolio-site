@@ -10,6 +10,8 @@ html,body{
 .container{
     background-color: $blue-light;
     padding: 50px;
+    @include roboto('regular');
+    font-size: 15px;
 }
 
 

@@ -7,7 +7,7 @@
 
 
 	color: $blanco;
-	font-family: 'Roboto', sans-serif;
+	@include roboto('regular');
 	font-size: 15px;
 }
 

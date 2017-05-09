@@ -2,6 +2,6 @@
 
 @section('content')
 	@component('component.header-ribbon')
-		SKILLS
+		{{ __('navigation.skills') }}
 	@endcomponent
 @endsection

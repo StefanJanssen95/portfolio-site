@@ -2,6 +2,6 @@
 
 @section('content')
 	@component('component.header-ribbon')
-		BLOG
+		{{ __('navigation.blog') }}
 	@endcomponent
 @endsection

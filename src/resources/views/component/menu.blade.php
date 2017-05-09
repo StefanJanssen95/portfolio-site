@@ -5,25 +5,25 @@
         <li class="nav__item {{ $currentPage == "about" ? "nav__item--selected":""}}">
             <a href="/about" class="nav__tab">
                 <i class="fa fa-user fa-2x"></i>
-                ABOUT ME
+                {{ __('navigation.about') }}
             </a>
         </li>
         <li class="nav__item {{ $currentPage == "skills" ? "nav__item--selected":""}}">
             <a href="/skills" class="nav__tab">
 	            <i class="fa fa-user fa-2x"></i>
-	            SKILLS
+	            {{ __('navigation.skills') }}
             </a>
         </li>
         <li class="nav__item {{ $currentPage == "projects" ? "nav__item--selected":""}}">
             <a href="/projects" class="nav__tab">
 	            <i class="fa fa-code-fork fa-2x"></i>
-	            PROJECTS
+                {{ __('navigation.projects') }}
             </a>
         </li>
         <li class="nav__item {{ $currentPage == "blog" ? "nav__item--selected":""}}">
             <a href="/blog" class="nav__tab">
 	            <i class="fa fa-comment fa-2x"></i>
-	            BLOG
+                {{ __('navigation.blog') }}
             </a>
         </li>
     </ul>

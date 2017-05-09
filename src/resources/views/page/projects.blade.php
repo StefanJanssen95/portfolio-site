@@ -2,6 +2,6 @@
 
 @section('content')
 	@component('component.header-ribbon')
-		PROJECTS
+		{{ __('navigation.projects') }}
 	@endcomponent
 @endsection
