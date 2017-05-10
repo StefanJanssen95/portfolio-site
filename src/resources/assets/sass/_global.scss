@@ -8,8 +8,6 @@ html,body{
 }
 
 .container{
-    padding: 50px;
-
     @include roboto('regular');
     font-size: 15px;
     color: $blue-dark;

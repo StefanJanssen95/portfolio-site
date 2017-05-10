@@ -10,7 +10,7 @@
         </li>
         <li class="nav__item {{ $currentPage == "skills" ? "nav__item--selected":""}}">
             <a href="/skills" class="nav__tab">
-	            <i class="fa fa-user fa-2x"></i>
+	            <i class="fa fa-cogs fa-2x"></i>
 	            {{ __('navigation.skills') }}
             </a>
         </li>

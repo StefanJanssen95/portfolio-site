@@ -2,6 +2,7 @@
 
 @section('content')
 	@component('component.header-ribbon')
+		@slot('icon') user @endslot
 		{{ __('navigation.about') }}
 	@endcomponent
 

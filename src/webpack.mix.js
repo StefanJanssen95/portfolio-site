@@ -19,4 +19,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
             require('postcss-cssnext')
         ]
     })
-    .sourceMaps();
+    .sourceMaps()
+    .copy('resources/assets/img/skills','public/images/skills')
+    .copy('resources/assets/img/projects','public/images/projects');

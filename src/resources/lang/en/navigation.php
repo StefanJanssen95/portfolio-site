@@ -5,4 +5,5 @@ return [
 	"skills" => "SKILLS",
 	"projects" => "PROJECTS",
 	"blog" => "BLOG",
+    "admin" => "ADMIN"
 ];

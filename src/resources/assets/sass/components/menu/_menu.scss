@@ -88,6 +88,7 @@
 }
 
 .container{
+    overflow-y: scroll;
     margin-left: 144px;
     padding: 0 350px 100px 350px;
     width: calc(100vw - 144px);

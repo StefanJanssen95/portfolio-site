@@ -1,32 +1,15 @@
 <?php
-use \App\Http\Controllers\WelcomeTextController;
 
-Route::get('/', function () {
-    return view('page.welcome', ["currentPage"=>"welcome", "text"=>WelcomeTextController::get()]);
-})->name('welcome');
+Route::get('/', 'WelcomeController@view')->name('welcome');
+Route::get('/about', 'AboutController@view')->name('about');
+Route::get('/skills', 'SkillController@view')->name('skills');
+Route::get('/projects', 'ProjectController@view')->name('projects');
+Route::get('/blog', 'BlogController@view')->name('blog');
+Route::get('/admin/', 'AdminController@view')->name('admin');
 
-Route::get('/about', function () {
-	return view('page.about', ["currentPage"=>"about"]);
-})->name('about');
-
-Route::get('/skills', function () {
-	return view('page.skills', ["currentPage"=>"skills"]);
-})->name('skills');
-
-Route::get('/projects', function () {
-	return view('page.projects', ["currentPage"=>"projects"]);
-})->name('projects');
-
-Route::get('/blog', function () {
-	return view('page.blog', ["currentPage"=>"blog"]);
-})->name('blog');
-
-Route::get('/blog/{id}/', function(){
-	return redirect('page.welcome');
-});
+Route::post('/login', '')
 
 // Redirects
-
 Route::get('/linkedin', function () {
 	return redirect('https://www.linkedin.com/in/stefanjanssenit/');
 });

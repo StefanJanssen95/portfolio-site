@@ -10,9 +10,11 @@ src/Homestead.yaml
 src/.env
 src/public/css/
 src/public/js/
+src/public/images/
 
 
 portfolio_laradock/logs
 
 .idea/
 npm-debug.log
+data
