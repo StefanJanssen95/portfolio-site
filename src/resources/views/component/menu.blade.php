@@ -26,10 +26,26 @@
                 {{ __('navigation.blog') }}
             </a>
         </li>
+        @if( Auth::user() )
+            <li class="nav__item {{ $currentPage == "admin" ? "nav__item--selected":""}}">
+                <a href="/admin" class="nav__tab">
+                    <i class="fa fa-rocket fa-2x"></i>
+                    {{ __('navigation.admin') }}
+                </a>
+            </li>
+            <li class="nav__item">
+                <form class="logout--form" method="post" action="/logout">
+                    {{ csrf_field() }}
+                    <button type="submit" class="logout--button"><i class="fa fa-sign-out fa-2x"></i></button>
+                </form>
+            </li>
+        @endif
     </ul>
-    <div class="nav__footer">
-        <a target="_blank" href="/linkedin"><i class="fa fa-linkedin fa-2x"></i></a>
-        <a target="_blank" href="/github"><i class="fa fa-github fa-2x"></i></a>
-        <a target="_blank" href="/gitlab"><i class="fa fa-gitlab fa-2x"></i></a>
-    </div>
+    @if( !Auth::user() )
+        <div class="nav__footer">
+            <a target="_blank" href="/linkedin"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a target="_blank" href="/github"><i class="fa fa-github fa-2x"></i></a>
+            <a target="_blank" href="/gitlab"><i class="fa fa-gitlab fa-2x"></i></a>
+        </div>
+    @endif
 </nav>
