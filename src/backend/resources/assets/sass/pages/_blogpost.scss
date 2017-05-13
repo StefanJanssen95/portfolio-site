@@ -1,0 +1,32 @@
+
+@import "code/highlighter";
+
+.post{
+	code{
+		display: inline-block;
+		padding: 1px 3px;
+		border-radius: 2px;
+		background-color: $blanco;
+		color: $blue-main;
+		font-family: Consolas, "Courier New", "Lucida Console", monospace;
+	}
+	pre>code{
+		display: block;
+		padding: 5px;
+		border-radius: 5px;
+		background-color: $blanco;
+		color: $blue-main;
+	}
+	table{
+		tbody>tr:nth-child(odd){
+			background-color: $blanco;
+		}
+	}
+
+	blockquote{
+		font-style: italic;
+		:before, :after{
+			content: "\"";
+		}
+	}
+}

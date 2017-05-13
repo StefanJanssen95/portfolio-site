@@ -1,10 +1,18 @@
-# TODO: Fix the SSH
 Set-Location $PSScriptRoot
 
+Import-Module .\Modules\ConvertFromDocker.psm1
+
 [xml]$Config = Get-Content "config.xml"
-$workspaceName = $Config.Settings.ContainerPrefix +"_workspace"
-$workspaceId = "baae7f5cc354b50b8348a31d778cbf48671399f8432416107bc7569d46f6e545"
-docker exec -it $workspaceId bash
+$workspaceImage = $Config.Settings.ContainerPrefix + "_workspace"
+
+
+docker ps | ConvertFrom-Docker | ForEach-Object{
+    if( $_.Image -eq $workspaceImage ) {
+        $workspaceId = $_.ContainerId
+    }
+}
 
 Set-Location $PSScriptRoot
 Set-Location $Config.Settings.AfterDoneLocation
+
+docker exec -it $workspaceId bash

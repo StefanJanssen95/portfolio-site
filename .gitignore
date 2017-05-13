@@ -1,16 +1,16 @@
-src/node_modules
-src/public/hot
-src/public/storage
-src/storage/*.key
-src/vendor
-src/.idea
-src/.vagrant
-src/Homestead.json
-src/Homestead.yaml
-src/.env
-src/public/css/
-src/public/js/
-src/public/images/
+src/backend/node_modules
+src/backend/public/hot
+src/backend/public/storage
+src/backend/storage/*.key
+src/backend/vendor
+src/backend/.idea
+src/backend/.vagrant
+src/backend/Homestead.json
+src/backend/Homestead.yaml
+src/backend/.env
+src/backend/public/css/
+src/backend/public/js/
+src/backend/public/images/
 
 
 portfolio_laradock/logs
