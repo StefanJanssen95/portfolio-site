@@ -13,6 +13,14 @@ src/backend/public/js/
 src/backend/public/images/
 
 
+src/frontend/.DS_Store
+src/frontend/node_modules/
+src/frontend/dist/
+src/frontend/npm-debug.log*
+src/frontend/yarn-debug.log*
+src/frontend/yarn-error.log*
+
+
 portfolio_laradock/logs
 
 .idea/
