@@ -1,0 +1,12 @@
+<nav class="nav no-select">
+  <div class="nav__img"></div>
+  <div class="nav__name">STEFAN JANSSEN</div>
+  <ul class="nav__list">
+    <li v-for="menuItem in menuItems" class="nav__item" :class="[ currentPage===menuItem.name ? 'nav__item--selected' : '']">
+      <router-link :to="menuItem.to" class="nav__tab">
+        <i class="fa fa-2x" :class="'fa-'+menuItem.icon"></i>
+        {{ menuItem.text }}
+      </router-link>
+    </li>
+  </ul>
+</nav>

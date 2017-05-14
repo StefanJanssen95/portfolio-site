@@ -1,0 +1,15 @@
+@define-mixin roboto $weight $size {
+  font-family: "Roboto", sans-serif;
+  font-size: $size;
+
+  @if $weight == "light" {
+    font-weight: 300;
+  } @else if $weight == "bold" {
+    font-weight: 700;
+  } @else if $weight == "regular" {
+    font-weight: 400;
+  } @else {
+    @warn "No font weight given, assuming 'regular'";
+    font-weight: 400;
+  }
+}

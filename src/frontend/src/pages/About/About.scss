@@ -1,0 +1,19 @@
+@import "../../../static/scss/_import.scss";
+
+.about{
+  &--container{
+
+  }
+  &__specialty-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__specialty {
+    width: 20%;
+    &-title {
+      @mixin roboto 'bold' 15 px;
+    }
+  }
+}

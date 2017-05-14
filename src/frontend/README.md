@@ -1,6 +1,6 @@
 # frontend
 
-> Frontend for my portfolio website
+> A Vue.js project
 
 ## Build Setup
 

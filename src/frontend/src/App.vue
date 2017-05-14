@@ -1,23 +1,37 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <sj-menu></sj-menu>
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import sjMenu from '@/components/Menu/Menu';
+
 export default {
   name: 'app',
+  components: {
+    sjMenu,
+  },
 };
 </script>
 
+<style scoped>
+  @import "../static/scss/_import.scss";
+
+  .container{
+    margin-left: $menu-width;
+    width: calc( 100vw - $menu-width );
+    min-height: 100vh;
+  }
+</style>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "../static/scss/_import.scss";
+
+  *{
+    box-sizing: border-box;
+  }
 </style>
