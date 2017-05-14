@@ -25,6 +25,10 @@ export default {
     margin-left: $menu-width;
     width: calc( 100vw - $menu-width );
     min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 </style>
 

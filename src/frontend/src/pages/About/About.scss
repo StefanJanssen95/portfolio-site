@@ -2,7 +2,10 @@
 
 .about{
   &--container{
-
+    max-width: 1000px;
+    min-width: 500px;
+    @mixin roboto $regular;
+    padding: 60px;
   }
   &__specialty-container {
     display: flex;
@@ -13,7 +16,7 @@
   &__specialty {
     width: 20%;
     &-title {
-      @mixin roboto 'bold' 15 px;
+      @mixin roboto $bold;
     }
   }
 }

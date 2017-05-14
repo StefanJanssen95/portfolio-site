@@ -7,14 +7,13 @@ export default {
   data(){
     return {
       typedText:         '',
-      maxDuration:       1500,
-      maxDelayPerLetter: 500,
+      maxDuration:       2500,
     };
   },
   created(){
     // TODO: Retrieve with an API request
-    let text = 'Page doesn\'t exist :\'(';
-    const delay = Math.min( this.maxDuration / text.length, this.maxDelayPerLetter );
+    let text = 'I tried my best to find the page you were looking for :\'(';
+    const delay = this.maxDuration / text.length;
     const self = this;
     const interval = window.setInterval( () => {
       self.typedText += text[0];

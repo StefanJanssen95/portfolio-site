@@ -7,18 +7,23 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
 }
 
 .typewriter__title{
-  @mixin roboto 'light' 45px;
+  @mixin roboto $light 45px;
   color: $blanco;
+  max-width: 1000px;
+  text-align: center;
+
   &--bold{
-    @mixin roboto 'bold' 45px;
+    @mixin roboto $bold 45px;
+    &:after{
+      content: "|";
+      animation: blinker 0.8s linear infinite;
+    }
   }
-  &:after{
-    content: "|";
-    animation: blinker 0.8s linear infinite;
-  }
+
 }
 
 @keyframes blinker {
