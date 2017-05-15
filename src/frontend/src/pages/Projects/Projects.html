@@ -1,5 +1,7 @@
-<div class="project__container">
+<div class="page__container--project">
   <sj-ribbon title="PROJECTS" icon="code-fork"></sj-ribbon>
-
+  <div class="project__container">
+    <sj-project v-for="(project, index) in projects" :project="project" :key="index"></sj-project>
+  </div>
 </div>
 

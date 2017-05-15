@@ -29,6 +29,8 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    background-color: $blue-light
   }
 </style>
 
@@ -37,5 +39,8 @@ export default {
 
   *{
     box-sizing: border-box;
+  }
+  .no-select{
+    user-select: none;
   }
 </style>

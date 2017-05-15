@@ -1,0 +1,49 @@
+@import "../../../static/scss/_import.scss";
+
+.project{
+  width: 250px;
+  height: 180px;
+  margin: 20px;
+  overflow: hidden;
+
+  &--color6{
+    background-color: $tile6;
+  }
+  &--color5{
+    background-color: $tile5;
+  }
+  &--color4{
+    background-color: $tile4;
+  }
+  &--color3{
+    background-color: $tile3;
+  }
+  &--color2{
+    background-color: $tile2;
+  }
+  &--color1{
+    background-color: $tile1;
+  }
+
+  &__title{
+    margin: 0;
+  }
+
+  &__details{
+    display: none;
+    padding: 10px;
+  }
+  &__image{
+    max-height: 100%;
+  }
+
+  &:hover{
+    .project__details{
+      display: block;
+    }
+    .project__image{
+      display: none;
+    }
+  }
+}
+

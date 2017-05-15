@@ -1,0 +1,7 @@
+<div class="project" :class="'project--color'+color">
+  <div class="project__details">
+    <h4 class="project__title">{{ project.name }}</h4>
+    <p class="project__description">{{ project.description }}</p>
+  </div>
+  <img v-if="project.cover" :src="project.cover" class="project__image">
+</div>

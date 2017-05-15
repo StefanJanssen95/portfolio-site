@@ -1,10 +1,19 @@
 @import "../../../static/scss/_import.scss";
+.page__container--project{
+  max-width: 1000px;
+  min-width: 500px;
+  width: 100%;
+  @mixin roboto $regular;
+  padding: 0 60px 60px 60px;
+}
 
 .project{
+
   &__container{
-    max-width: 1000px;
-    min-width: 500px;
-    @mixin roboto $regular;
-    padding: 0 60px 60px 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
