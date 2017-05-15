@@ -1,0 +1,9 @@
+<div class="page__container--skill">
+  <sj-ribbon title="SKILLS" icon="cogs"></sj-ribbon>
+  <div class="skill__container">
+    <div v-for="skill in skills" class="skill" :title="skill.name">
+      <img :src="logoPath+skill.logo" :alt="skill.name" class="skill__image">
+    </div>
+  </div>
+</div>
+

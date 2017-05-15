@@ -1,0 +1,26 @@
+@import "../../../static/scss/_import.scss";
+.page__container--skill{
+  max-width: 1000px;
+  min-width: 500px;
+  padding: 0 60px 60px 60px;
+}
+.skill{
+  width: 15%;
+  margin-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+  }
+  &__image{
+    max-width: 110px;
+    max-height: 110px;
+    width: 80%;
+  }
+}

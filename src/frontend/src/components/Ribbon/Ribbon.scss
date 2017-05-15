@@ -13,7 +13,6 @@
 
   &__icon{
     color: $blue-dark;
-    margin-bottom: 20px;
   }
 }
 
@@ -23,11 +22,12 @@
   &-end{
     display: inline-block;
     position: relative;
-    top: -3px;
+    top: 15px;
     width: 45px;
     height: 45px;
     background-color: $purple-dark;
   }
+
   &-middle{
     display: inline-flex;
     justify-content: center;

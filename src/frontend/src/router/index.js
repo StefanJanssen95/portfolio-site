@@ -3,6 +3,8 @@ import Router from 'vue-router';
 import sjWelcome from '@/pages/Welcome/Welcome';
 import sjError from '@/pages/404/404';
 import sjAbout from '@/pages/About/About';
+import sjSkills from '@/pages/Skills/Skills';
+import sjProjects from '@/pages/Projects/Projects';
 
 Vue.use( Router );
 
@@ -19,11 +21,11 @@ export default new Router( {
     }, {
       path: '/skills',
       name: 'skills',
-      component: sjError,
+      component: sjSkills,
     }, {
       path: '/projects',
       name: 'projects',
-      component: sjError,
+      component: sjProjects,
     }, {
       path: '/blog',
       name: 'blog',

@@ -1,11 +1,11 @@
 @import "../../../static/scss/_import.scss";
 
 .about{
-  &--container{
+  &__container{
     max-width: 1000px;
     min-width: 500px;
     @mixin roboto $regular;
-    padding: 60px;
+    padding: 0 60px 60px 60px;
   }
   &__specialty-container {
     display: flex;
