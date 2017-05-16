@@ -5,7 +5,7 @@ export default {
   name: 'sj-project',
   data(){
     return {
-      color: Math.floor( Math.random() * 6 ) + 1,
+      color: Math.floor( Math.random() * 11 ) + 1,
     };
   },
   props: {

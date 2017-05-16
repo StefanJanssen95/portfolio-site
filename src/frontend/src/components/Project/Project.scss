@@ -6,6 +6,21 @@
   margin: 20px;
   overflow: hidden;
 
+  &--color11{
+    background-color: $tile11;
+  }
+  &--color10{
+    background-color: $tile10;
+  }
+  &--color9{
+    background-color: $tile9;
+  }
+  &--color8{
+    background-color: $tile8;
+  }
+  &--color7{
+    background-color: $tile7;
+  }
   &--color6{
     background-color: $tile6;
   }

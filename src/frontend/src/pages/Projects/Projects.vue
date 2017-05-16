@@ -14,6 +14,54 @@
             name: 'Portfolio website',
             description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
             cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
+          }, {
+            name: 'Portfolio website',
+            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
+            cover: '../../static/img/projects/portfolio.png',
           },
         ],
       };
