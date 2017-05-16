@@ -9,6 +9,7 @@ import sjProjects from '@/pages/Projects/Projects';
 Vue.use( Router );
 
 export default new Router( {
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -37,6 +38,9 @@ export default new Router( {
           component: sjError,
         },
       ],
+    }, {
+      path: '*',
+      component: sjError,
     },
   ],
 } );
