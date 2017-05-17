@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 class SkillController extends Controller {
 	static public function all(){
-		return [
+		return json_encode([
 			[
 				"logo" => "Laravel.svg",
 				"name" => "Laravel",
@@ -42,6 +42,6 @@ class SkillController extends Controller {
 				"logo" => "Yeoman.svg",
 				"name" => "Yeoman",
 			],
-		];
+		]);
 	}
 }

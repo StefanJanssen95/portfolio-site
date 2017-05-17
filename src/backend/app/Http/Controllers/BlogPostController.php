@@ -12,11 +12,11 @@ use Michelf\MarkdownExtra;
 class BlogPostController extends Controller {
 
 	static public function get( $id ){
-		return BlogPost::find($id);
+		return json_encode( BlogPost::find($id) );
 	}
 
 	static public function all(){
-		return BlogPost::all();
+		return json_encode(BlogPost::all());
 	}
 
 	static public function delete($id){

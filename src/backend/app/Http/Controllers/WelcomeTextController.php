@@ -13,6 +13,8 @@ class WelcomeTextController extends Controller {
 			'a .NET developer.',
 		    'a tech enthousiast.',
 		];
-		return $texts[array_rand($texts)];
+		return json_encode([
+			"text"=>$texts[array_rand($texts)]
+		]);
 	}
 }

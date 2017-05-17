@@ -29,6 +29,8 @@ export default {
           icon: 'comment',
         },
       ],
+      baseApi: 'https://localhost:443/',
+
     };
   },
 };

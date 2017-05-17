@@ -6,23 +6,35 @@ export default {
   name: 'sj-welcome',
   data(){
     return {
-      typedText:         '',
-      maxDuration:       1500,
+      text: '',
+      typedText: '',
+      maxDuration: 1500,
       maxDelayPerLetter: 500,
     };
   },
+  methods: {
+    startTyping(){
+      const delay = Math.min( this.maxDuration / this.text.length, this.maxDelayPerLetter );
+      const self = this;
+      const interval = window.setInterval( () => {
+        self.typedText += self.text[0];
+        self.text = self.text.substr( 1 );
+        if( self.text.length === 0 ){
+          clearInterval( interval );
+        }
+      }, delay );
+    },
+  },
   created(){
-    // TODO: Retrieve with an API request
-    let text = 'a fullstack developer.';
-    const delay = Math.min( this.maxDuration / text.length, this.maxDelayPerLetter );
-    const self = this;
-    const interval = window.setInterval( () => {
-      self.typedText += text[0];
-      text = text.substr( 1 );
-      if( text.length === 0 ){
-        clearInterval( interval );
-      }
-    }, delay );
+    this.axios.get( '/welcome/random' )
+      .then( ( response ) => {
+        this.text = response.data.text;
+        this.startTyping();
+      } )
+      .catch( () => {
+        this.text = 'a full-stack developer.';
+        this.startTyping();
+      } );
   },
 };
 </script>
