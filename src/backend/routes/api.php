@@ -14,7 +14,6 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/welcome/random', 'WelcomeTextController@get');
-Route::get('/skills/', 'SkillController@all');
 Route::get('/projects/', 'ProjectController@all');
 Route::get('/projects/{id}', 'ProjectController@get');
 
