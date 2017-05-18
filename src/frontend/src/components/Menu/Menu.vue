@@ -5,7 +5,6 @@ export default {
   name: 'sj-menu',
   data(){
     return {
-      currentPage: 'welcome',
       menuItems: [
         {
           name: 'about',
@@ -30,6 +29,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    currentPage(){
+      return this.$route.name.split( '.' )[0];
+    },
   },
 };
 </script>
