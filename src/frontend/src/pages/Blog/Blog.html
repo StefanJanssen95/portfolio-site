@@ -1,0 +1,9 @@
+<div class="page__container--blog">
+  <sj-ribbon title="BLOG" icon="comment"></sj-ribbon>
+  <div class="blog__container">
+    <sj-loading-icon v-if="status === 0"></sj-loading-icon>
+    <p v-else-if="status === -1">Something went wrong while retrieving the blog, please try again later.</p>
+    <sj-project v-else v-for="(project, index) in projects" :project="project" :key="index"></sj-project>
+  </div>
+</div>
+

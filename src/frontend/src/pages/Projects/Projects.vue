@@ -4,71 +4,31 @@
 <script>
   import sjRibbon from '@/components/Ribbon/Ribbon';
   import sjProject from '@/components/Project/Project';
+  import sjLoadingIcon from '@/components/LoadingIcon/LoadingIcon';
 
   export default {
     name: 'sj-projects',
     data(){
       return {
-        projects: [
-          {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          }, {
-            name: 'Portfolio website',
-            description: 'The website you are currently looking at. It\'s made with Laravel and Vue.js, running on a caddy server',
-            cover: '../../static/img/projects/portfolio.png',
-          },
-        ],
+        projects: [],
+        status: 0,
       };
     },
-    components:{
+    components: {
       sjRibbon,
       sjProject,
+      sjLoadingIcon,
+    },
+    created(){
+      this.axios.get( '/projects/' )
+        .then( ( response ) => {
+          this.status = 1;
+          this.projects = response.data;
+        } )
+        .catch( ( error ) => {
+          this.status = -1;
+          console.log( error );
+        } );
     },
   };
 </script>

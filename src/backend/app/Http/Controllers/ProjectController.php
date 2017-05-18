@@ -8,13 +8,19 @@ class ProjectController extends Controller {
 			"name" => "Portfolio website",
 			"description" => "The website you are looking at right now.",
 			"tags" => ["HTML5", "SCSS", "PHP", "Laravel", "PostCSS", "MySQL"],
-			"photo" => "portfolio.png"
-		]
+			"cover" => "portfolio.png"
+		],
 	];
 	static public function all(){
-		return json_encode(static::$projects);
+		$projects = static::$projects;
+		foreach( $projects as $key=>$project){
+			$projects[$key]['cover'] = asset("/images/projects/".$project['cover'], true);
+		}
+		return json_encode($projects);
 	}
 	static public function get($id){
-		return json_encode(static::$projects[$id]);
+		$project = static::$projects[$id];
+		$project['cover'] = asset("/images/projects/".$project['cover'], true);
+		return json_encode( $project );
 	}
 }

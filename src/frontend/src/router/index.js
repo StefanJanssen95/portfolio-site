@@ -5,6 +5,7 @@ import sjError from '@/pages/404/404';
 import sjAbout from '@/pages/About/About';
 import sjSkills from '@/pages/Skills/Skills';
 import sjProjects from '@/pages/Projects/Projects';
+import sjBlog from '@/pages/Blog/Blog';
 
 Vue.use( Router );
 
@@ -13,7 +14,7 @@ export default new Router( {
   routes: [
     {
       path: '/',
-      name: 'Welcome',
+      name: 'welcome',
       component: sjWelcome,
     }, {
       path: '/about',
@@ -30,7 +31,7 @@ export default new Router( {
     }, {
       path: '/blog',
       name: 'blog',
-      component: sjError,
+      component: sjBlog,
       children: [
         {
           path: ':id',
