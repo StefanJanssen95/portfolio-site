@@ -18,11 +18,11 @@ class CreateBlogsTable extends Migration
         	$table->increments('id');
         	$table->string('name', 100);
 	        $table->text('description');
-        	$table->dateTime('published_at')->default(DB::raw('CURRENT_TIMESTAMP'));;
         	$table->unsignedInteger('blog_cover_id')->nullable();
         	$table->string('markdown_path', 255);
         	$table->string('html_path', 255);
-
+        	$table->dateTime('publish_date')->nullable();
+	        $table->timestamps();
 
 	        $table->foreign('blog_cover_id')->references('id')->on('blog_covers');
         });
