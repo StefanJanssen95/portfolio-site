@@ -19,4 +19,7 @@ class Project extends Model {
 		return $this->belongsToMany(ProjectTag::class, 'project_has_tags');
 	}
 
+	public function getImageAttribute($value){
+		return asset("/images/projects/$value", true);
+	}
 }

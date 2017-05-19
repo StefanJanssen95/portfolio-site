@@ -10,4 +10,8 @@ class BlogCover extends Model {
 		'name',
 	    'image_path'
 	];
+
+	public function getImagePathAttribute($value){
+		return asset("/images/projects/$value", true);
+	}
 }
