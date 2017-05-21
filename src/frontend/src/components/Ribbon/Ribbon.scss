@@ -34,7 +34,8 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    width: 10em;
+    padding: 0 50px;
+    min-width: 10em;
     height: 45px;
     margin: 0 -10px;
     background-color: $purple-light;
