@@ -58,6 +58,7 @@ export default new Router( {
     }, {
       path: '*',
       component: sjError,
+      name: 'NotFound',
     },
   ],
 } );

@@ -20,6 +20,9 @@
           }, {
             title: 'Manage Tags',
             component: '',
+          }, {
+            title: 'Manage Covers',
+            component: '',
           },
         ],
       };
