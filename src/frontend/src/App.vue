@@ -18,6 +18,24 @@ export default {
 };
 </script>
 
+<style src="../static/vendor/css/font-awesome.min.css"></style>
+<style src="../static/vendor/css/Roboto.css"></style>
+<style src="../static/vendor/css/normalize.min.css"></style>
+<style src="../static/scss/_table.scss"></style>
+<style src="../static/scss/_btn.scss"></style>
+<style>
+  @import "../static/scss/_import.scss";
+
+  *{
+    box-sizing: border-box;
+  }
+  .no-select{
+    user-select: none;
+  }
+</style>
+
+
+
 <style scoped>
   @import "../static/scss/_import.scss";
 
@@ -30,17 +48,7 @@ export default {
     flex-direction: row;
     justify-content: center;
 
-    background-color: $blue-light
-  }
-</style>
-
-<style>
-  @import "../static/scss/_import.scss";
-
-  *{
-    box-sizing: border-box;
-  }
-  .no-select{
-    user-select: none;
+    background-color: $blue-light;
+    overflow-y: scroll
   }
 </style>

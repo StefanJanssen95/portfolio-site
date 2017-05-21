@@ -3,7 +3,7 @@
   <div class="blog__container">
     <sj-loading-icon v-if="status === 0"></sj-loading-icon>
     <p v-else-if="status === -1">Something went wrong while retrieving the blog, please try again later.</p>
-    <sj-project v-else v-for="(project, index) in projects" :project="project" :key="index"></sj-project>
+    <sj-blog-post v-else v-for="(post, index) in posts" :post="post" :key="index"></sj-blog-post>
   </div>
 </div>
 

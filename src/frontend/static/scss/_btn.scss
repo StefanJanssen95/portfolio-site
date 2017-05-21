@@ -1,0 +1,57 @@
+@import "./_import.scss";
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  &--default{
+    border-color:  #CCCCCC;
+    color: #333333;
+    background-color: #FFFFFF;
+    &:hover{
+      background-color: #e6e6e6;
+      border-color: #adadad;
+      &:active{
+        background-color: #d4d4d4;
+        border-color: #8c8c8c;
+      }
+    }
+  }
+
+  &--danger{
+    color: #FFFFFF;
+    background-color: #D9534F;
+    border-color: #D43F3A;
+    &:hover{
+      background-color: #c9302c;
+      border-color: #ac2925;
+      &:active{
+        background-color: #ac2925;
+        border-color: #761c19;
+      }
+    }
+  }
+
+  &--warning{
+    color: #FFFFFF;
+    background-color: #F0AD4E;
+    border-color: #EEA236;
+    &:hover{
+      background-color: #ec971f;
+      border-color: #d58512;
+      &:active{
+        background-color: #d58512;
+        border-color: #985f0d;
+      }
+    }
+  }
+}

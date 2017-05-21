@@ -22,7 +22,6 @@ class CreateBlogsTable extends Migration
         	$table->string('markdown_path', 255);
         	$table->string('html_path', 255);
         	$table->dateTime('publish_date')->nullable();
-	        $table->timestamps();
 
 	        $table->foreign('blog_cover_id')->references('id')->on('blog_covers');
         });

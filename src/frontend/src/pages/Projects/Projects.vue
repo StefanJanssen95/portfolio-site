@@ -25,9 +25,8 @@
           this.status = 1;
           this.projects = response.data;
         } )
-        .catch( ( error ) => {
+        .catch( ( ) => {
           this.status = -1;
-          console.log( error );
         } );
     },
   };

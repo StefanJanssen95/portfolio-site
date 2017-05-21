@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
-class StoreBlogPost extends FormRequest
+class BlogPostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,12 @@ class StoreBlogPost extends FormRequest
      */
     public function rules()
     {
+    	/// TODO: Fix this request so it wont return 403
 	    return [
 		    'name' => 'required|max:100',
 		    'description' => 'required',
-		    'markdown' => 'required|file'
+		    'markdown' => 'required',
+	        'publishDate' => 'required',
 	    ];
     }
 }

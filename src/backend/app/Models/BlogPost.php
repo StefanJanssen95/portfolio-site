@@ -4,6 +4,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class BlogPost extends Model {
+	public $timestamps = false;
+
 	protected $fillable = [
 		'blog_cover_id',
 		'name',

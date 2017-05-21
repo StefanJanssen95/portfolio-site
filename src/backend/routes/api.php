@@ -19,5 +19,9 @@ Route::get('/projects/{id}', 'ProjectController@get');
 
 Route::group(['prefix'=>'/blog'], function(){
 	Route::get('/', 'BlogPostController@all');
+	Route::get('/published', 'BlogPostController@published');
 	Route::get('/{id}', 'BlogPostController@get');
+
+	Route::post('/store', 'BlogPostController@store');
+	Route::delete('/{id}', 'BlogPostController@delete');
 });

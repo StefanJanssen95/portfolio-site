@@ -1,29 +1,29 @@
-<template src="./Blog.html"></template>
-<style scoped src="./Blog.scss"></style>
+<template src="./Post.html"></template>
+<style scoped src="./Post.scss"></style>
 
 <script>
 import sjRibbon from '@/components/Ribbon/Ribbon';
-import sjBlogPost from '@/components/BlogPost/BlogPost';
 import sjLoadingIcon from '@/components/LoadingIcon/LoadingIcon';
 
 export default {
-  name: 'sj-blog',
+  name: 'sj-post',
   data(){
     return {
       status: 0,
-      posts: [],
+      post: {
+        name: 'LOADING',
+      },
     };
   },
   components:{
     sjRibbon,
-    sjBlogPost,
     sjLoadingIcon,
   },
   created(){
-    this.axios.get( '/blog/published' )
+    this.axios.get( `/blog/${this.$route.params.id}` )
     .then( ( response ) => {
       console.log( response );
-      this.posts = response.data.posts;
+      this.post = response.data.post;
       this.status = 1;
     } )
     .catch( () => {

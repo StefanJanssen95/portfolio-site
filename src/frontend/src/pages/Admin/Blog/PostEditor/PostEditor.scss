@@ -1,0 +1,19 @@
+@import "../../../../../static/scss/_import.scss";
+
+.post__form{
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+
+  @mixin roboto;
+}
+
+.input{
+  margin: 5px 0;
+  padding: 5px
+}
+
+.input-warning{
+  @mixin roboto $bold;
+  color: red;
+}

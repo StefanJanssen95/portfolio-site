@@ -16,11 +16,10 @@ class Cors
 	public function handle($request, Closure $next) {
 		if(isset($request->server()['HTTP_ORIGIN'])) {
 			$origin = $request->server()['HTTP_ORIGIN'];
-			if( (in_array($origin, config('domains.allowed'))) && !in_array($origin, config('domains.denied'))) {
+			if( (in_array( $origin, config( 'domains.allowed' ) ) ) && !in_array( $origin, config( 'domains.denied' ) ) ){
 				header('Access-Control-Allow-Origin: ' . $origin);
 				$this->addHeaders();
-			}
-			else if (in_array('*', config('domains.allowed'))) {
+			} elseif( in_array( '*', config( 'domains.allowed' ) ) ){
 				header('Access-Control-Allow-Origin: \'*\'');
 				$this->addHeaders();
 			}
