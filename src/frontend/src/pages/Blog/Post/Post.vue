@@ -1,5 +1,6 @@
 <template src="./Post.html"></template>
 <style scoped src="./Post.scss"></style>
+<style src="../../../../static/scss/highlightjs/_highlighter.scss"></style>
 
 <script>
 import sjRibbon from '@/components/Ribbon/Ribbon';

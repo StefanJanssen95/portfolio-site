@@ -17,6 +17,9 @@ class BlogPostController extends Controller {
 
 	static public function get( $id ){
 		$post = BlogPost::find($id);
+		if( Carbon::createFromFormat('Y-m-d H:i:s', $post['publish_date'])->isFuture() ){
+			return response()->json( ['error' => 'Blogpost hasn\'t been published yet.'], 423);
+		}
 		$post['html'] = Storage::get($post['html_path']);
 		unset($post['html_path']);
 		unset($post['markdown_path']);
@@ -81,7 +84,7 @@ class BlogPostController extends Controller {
 		$codeBlockRegex = "/<pre><code class=\"([a-z]+)\">([\s\S]*)<\/code><\/pre>/iU";
 		$parsedHtml = preg_replace_callback($codeBlockRegex, function($matches){
 			$result = static::$highlighter->highlight($matches[1], $matches[2]);
-			return "<pre><code class='$matches[1]'>" . $result->value . "</code></pre>";
+			return "<pre class='$matches[1] hljs'>" . $result->value . "</pre>";
 		}, $parsedHtml);
 
 		return $parsedHtml;
