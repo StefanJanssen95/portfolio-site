@@ -45,6 +45,7 @@ export default new Router( {
       component: sjAdmin,
       children: [
         {
+          alias: '/admin',
           path: '/admin/dashboard',
           name: 'admin.dashboard',
           component: sjAdminDashboard,

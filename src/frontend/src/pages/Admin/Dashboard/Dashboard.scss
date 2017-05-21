@@ -1,4 +1,18 @@
 @import "../../../../static/scss/_import.scss";
 
-.page__container--blog{
+.tile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  width: 256px;
+  height: 256px;
+  background-color: $blue-main;
+  color: $blanco;
+  @mixin roboto $bold 17px;
+
+  &:hover{
+    background-color: $blue-dark;
+  }
 }

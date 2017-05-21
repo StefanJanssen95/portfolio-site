@@ -28,7 +28,6 @@ export default {
   created(){
     this.axios.get( '/welcome/random' )
       .then( ( response ) => {
-        console.log( response );
         this.text = response.data.text;
         this.startTyping();
       } )

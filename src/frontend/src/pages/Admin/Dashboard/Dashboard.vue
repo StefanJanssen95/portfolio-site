@@ -6,8 +6,7 @@
   export default {
     name: 'sj-admin-dashboard',
     data(){
-      return {
-      };
+      return {};
     },
     components:{
     },

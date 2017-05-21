@@ -1,5 +1,5 @@
 <div class="page__container--admin">
   <sj-ribbon title="ADMIN PANEL" icon="rocket"></sj-ribbon>
+  <router-link class="button__back" to="/admin/dashboard" v-if="$router.currentRoute.name !== 'admin.dashboard'">BACK</router-link>
   <router-view></router-view>
 </div>
-
