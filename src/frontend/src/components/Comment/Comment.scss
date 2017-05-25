@@ -1,0 +1,28 @@
+@import "../../../static/scss/_import.scss";
+
+.comment{
+  padding: 20px;
+  margin-bottom: 5px;
+
+  list-style: none;
+  background-color: $blue-light-alt;
+  &:nth-child(2n+1){
+    background-color: $blanco;
+  }
+
+  &__header{
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__author{
+    margin: 0;
+  }
+  &__date{
+    text-align: right;
+  }
+  &__message{
+    margin: 0;
+  }
+}

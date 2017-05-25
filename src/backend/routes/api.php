@@ -20,12 +20,13 @@ Route::get('/projects/{id}', 'ProjectController@get');
 Route::group(['prefix'=>'/blog'], function(){
 	Route::get('/', 'BlogPostController@all');
 	Route::get('/published', 'BlogPostController@published');
+	Route::get('{postId}/comments/', 'CommentController@getForPost');
 	Route::get('/{id}', 'BlogPostController@get');
 
-	Route::post('/store', 'BlogPostController@store');
+	Route::post('/', 'BlogPostController@store');
 	Route::delete('/{id}', 'BlogPostController@delete');
 });
 
 Route::group(['prefix'=>'/comment'], function(){
-
+	Route::post('/', 'CommentController@store');
 });

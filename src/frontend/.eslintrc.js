@@ -64,7 +64,7 @@ module.exports = {
     "no-delete-var": 2,
     "no-unused-vars": 2,
     "brace-style": [2,"1tbs",{"allowSingleLine":true}],
-    "camelcase": [2,{"properties":"always"}],
+    "camelcase": 0,
     "comma-spacing": [2,{"after":true}],
     "comma-style": 2,
     "eol-last": 2,

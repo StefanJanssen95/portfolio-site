@@ -2,7 +2,7 @@
 <style scoped src="./BlogPost.scss"></style>
 <script>
 export default {
-  name: 'sj-project',
+  name: 'sj-blog-post',
   data(){
     return {
 

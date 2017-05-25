@@ -31,7 +31,7 @@
     },
     methods: {
       sendForm(){
-        this.axios.post( '/blog/store', {
+        this.axios.post( '/blog', {
           name: this.title,
           description: this.description,
           markdown: this.markdown,

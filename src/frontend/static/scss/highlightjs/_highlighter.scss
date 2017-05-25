@@ -2,6 +2,17 @@
 
 /* Based on: Android Studio styling by Pedro Oliveira */
 
+code{
+  display: inline-block;
+  padding: 2px 4px;
+  margin: 1px 0;
+  font-family: "Lucida Console",monospace;
+  font-size: 0.9em;
+
+  color: $hljsBackground;
+  background: $hljsColor;
+}
+
 .hljs {
   color: $hljsColor;
   background: $hljsBackground;

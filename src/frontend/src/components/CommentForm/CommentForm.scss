@@ -1,0 +1,19 @@
+@import "../../../static/scss/_import.scss";
+
+.form{
+  &__container{
+    text-align: right;
+    max-width: 500px;
+  }
+  &__item{
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.textarea{
+  width: 100%;
+  height: 100px;
+}

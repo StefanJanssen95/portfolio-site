@@ -8,7 +8,7 @@ table {
   width: 100%;
 }
 tbody>tr {
-  background-color: #E0D8F2;
+  background-color: $blue-light-alt;
   &:nth-child(2n+1) {
     background-color: $blue-light;
   }

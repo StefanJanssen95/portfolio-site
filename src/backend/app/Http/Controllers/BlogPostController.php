@@ -18,7 +18,7 @@ class BlogPostController extends Controller {
 	static public function get( $id ){
 		$post = BlogPost::find($id);
 		if( Carbon::createFromFormat('Y-m-d H:i:s', $post['publish_date'])->isFuture() ){
-			return response()->json( ['error' => 'Blogpost hasn\'t been published yet.'], 423);
+			return response()->json( ['error' => 'Page not found'], 404);
 		}
 		$post['html'] = Storage::get($post['html_path']);
 		unset($post['html_path']);

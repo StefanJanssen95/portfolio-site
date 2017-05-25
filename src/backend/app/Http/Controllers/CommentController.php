@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use Auth;
-use Request;
+use Illuminate\Http\Request;
 
 class CommentController extends Controller {
 
 	static public function getForPost( $postId ){
-		Comment::all()
+		return response()->json( ['comments' => Comment::all()
 			->where('post_id', $postId)
-			->whereNull('comment_parent');
+			->where('comment_parent', null)
+			->where('approved', 1)
+        ] );
 	}
 
 	static public function getNeedsApproval(){
@@ -19,7 +21,7 @@ class CommentController extends Controller {
 	}
 
 	static public function store(Request $request){
-		$comment = new Comment( $request->all() );
+		$comment = new Comment( $request->toArray() );
 		// Approve if user is signed in (so admin)
 		if( Auth::user() ){
 			$comment->approved = 1;

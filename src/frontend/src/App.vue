@@ -23,6 +23,7 @@ export default {
 <style src="../static/vendor/css/normalize.min.css"></style>
 <style src="../static/scss/_table.scss"></style>
 <style src="../static/scss/_btn.scss"></style>
+<style src="../static/scss/_elements.scss"></style>
 <style>
   @import "../static/scss/_import.scss";
 
