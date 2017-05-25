@@ -8,12 +8,13 @@ import sjProjects from '@/pages/Projects/Projects';
 import sjBlog from '@/pages/Blog/Blog';
 import sjPost from '@/pages/Blog/Post/Post';
 import sjAdmin from '@/pages/Admin/Admin';
+import sjAdminLogin from '@/pages/Admin/Login/Login';
 import sjAdminDashboard from '@/pages/Admin/Dashboard/Dashboard';
 import sjAdminBlog from '@/pages/Admin/Blog/Blog';
 
 Vue.use( Router );
 
-export default new Router( {
+const router = new Router( {
   mode: 'history',
   routes: [
     {
@@ -46,13 +47,19 @@ export default new Router( {
       children: [
         {
           alias: '/admin',
+          path: '/admin/login',
+          name: 'admin.login',
+          component: sjAdminLogin,
+        }, {
           path: '/admin/dashboard',
           name: 'admin.dashboard',
           component: sjAdminDashboard,
+          meta: { requiresAuth: true },
         }, {
           path: '/admin/blog',
           name: 'admin.blog',
           component: sjAdminBlog,
+          meta: { requiresAuth: true },
         },
       ],
     }, {
@@ -62,3 +69,22 @@ export default new Router( {
     },
   ],
 } );
+
+router.beforeEach( ( to, from, next ) => {
+  if( to.matched.some( ( record ) => record.meta.requiresAuth ) ){
+    const a = true;
+
+    if( a ){
+      next( {
+        path: '/admin/login',
+        query: { redirect: to.fullPath },
+      } );
+    }else{
+      next();
+    }
+  }else{
+    next();
+  }
+} );
+
+export default router;

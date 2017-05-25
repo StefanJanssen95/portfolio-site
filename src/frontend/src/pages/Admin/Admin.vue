@@ -13,6 +13,11 @@
     components:{
       sjRibbon,
     },
+    computed: {
+      showBackButton(){
+        return ( this.$router.currentRoute.name !== 'admin.dashboard' && this.$router.currentRoute.name !== 'admin.login' );
+      },
+    },
   };
 </script>
 
