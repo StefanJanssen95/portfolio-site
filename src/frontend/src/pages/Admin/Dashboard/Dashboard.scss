@@ -1,6 +1,13 @@
 @import "../../../../static/scss/_import.scss";
 
+.page__container--dashboard{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .tile{
+  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
