@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\WelcomeText;
+use App\Models\WelcomeText;
 
 class WelcomeTextController extends Controller {
 	static public function get(){

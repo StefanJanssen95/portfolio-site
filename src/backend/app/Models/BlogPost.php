@@ -22,4 +22,9 @@ class BlogPost extends Model {
 	public function tags(){
 		return $this->belongsToMany(BlogTag::class, 'blog_has_tags');
 	}
+
+	public function nestedComments() {
+	    return $this->hasMany(Comment::class)->where('comment_parent', 0);
+	}
+
 }

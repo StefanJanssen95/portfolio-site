@@ -25,3 +25,7 @@ Route::group(['prefix'=>'/blog'], function(){
 	Route::post('/store', 'BlogPostController@store');
 	Route::delete('/{id}', 'BlogPostController@delete');
 });
+
+Route::group(['prefix'=>'/comment'], function(){
+
+});
