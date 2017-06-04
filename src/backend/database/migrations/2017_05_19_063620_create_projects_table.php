@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration
 	        $table->string('github', 100)->nullable();
 	        $table->string('gitlab', 100)->nullable();
 	        $table->string('site', 100)->nullable();
+	        $table->boolean('hidden')->default(false);
             $table->timestamps();
         });
     }

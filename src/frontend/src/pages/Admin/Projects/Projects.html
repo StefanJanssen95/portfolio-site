@@ -3,7 +3,8 @@
   <form class="cover__form" id="form">
     <label for="name">Name:</label>
     <input class="input" type="text" id="name" placeholder="Name" v-model="name">
-
+    <label for="description">Description:</label>
+    <textarea name="" id="description" v-model="description"></textarea>
     <input class="input" type="file" id="image-upload">
 
     <input class="input" type="button" value="Add Cover" @click="sendForm()">
@@ -12,9 +13,8 @@
   <table class="table">
     <thead>
     <tr class="table__row--head">
-      <th class="table__cell">ID</th>
       <th class="table__cell">NAME</th>
-      <th class="table__cell">IMAGE</th>
+      <th class="table__cell">LINKS</th>
       <th class="table__cell table__cell--center table__cell--action">ACTIONS</th>
     </tr>
     </thead>

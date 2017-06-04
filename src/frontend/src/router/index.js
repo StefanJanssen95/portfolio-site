@@ -7,10 +7,12 @@ import sjSkills from '@/pages/Skills/Skills';
 import sjProjects from '@/pages/Projects/Projects';
 import sjBlog from '@/pages/Blog/Blog';
 import sjPost from '@/pages/Blog/Post/Post';
+
 import sjAdmin from '@/pages/Admin/Admin';
 import sjAdminLogin from '@/pages/Admin/Login/Login';
 import sjAdminDashboard from '@/pages/Admin/Dashboard/Dashboard';
 import sjAdminBlog from '@/pages/Admin/Blog/Blog';
+import sjAdminProjects from '@/pages/Admin/Projects/Projects';
 
 Vue.use( Router );
 
@@ -59,6 +61,11 @@ const router = new Router( {
           path: '/admin/blog',
           name: 'admin.blog',
           component: sjAdminBlog,
+          meta: { requiresAuth: true },
+        }, {
+          path: '/admin/projects',
+          name: 'admin.projects',
+          component: sjAdminProjects,
           meta: { requiresAuth: true },
         },
       ],
