@@ -10,16 +10,16 @@ class Project extends Model {
 		'name',
 		'description',
 	    'image',
-	    'github',
-	    'gitlab',
+	    'git',
 	    'site',
+	    'hidden',
 	];
 
 	public function tags(){
 		return $this->belongsToMany(ProjectTag::class, 'project_has_tags');
 	}
 
-	public function getImageAttribute($value){
-		return asset("/images/projects/$value", true);
+	public function getNameAttribute($value){
+		return strtoupper($value);
 	}
 }

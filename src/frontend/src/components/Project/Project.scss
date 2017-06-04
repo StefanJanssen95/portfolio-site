@@ -5,40 +5,9 @@
   height: 180px;
   margin: 20px;
   overflow: hidden;
-
-  &--color11{
-    background-color: $tile11;
-  }
-  &--color10{
-    background-color: $tile10;
-  }
-  &--color9{
-    background-color: $tile9;
-  }
-  &--color8{
-    background-color: $tile8;
-  }
-  &--color7{
-    background-color: $tile7;
-  }
-  &--color6{
-    background-color: $tile6;
-  }
-  &--color5{
-    background-color: $tile5;
-  }
-  &--color4{
-    background-color: $tile4;
-  }
-  &--color3{
-    background-color: $tile3;
-  }
-  &--color2{
-    background-color: $tile2;
-  }
-  &--color1{
-    background-color: $tile1;
-  }
+  background-color: $blue-main;
+  color: $blanco;
+  position: relative;
 
   &__title{
     margin: 0;
@@ -62,3 +31,14 @@
   }
 }
 
+.link-box{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.icon-link{
+  color: $blanco;
+  font-size: 20px;
+  margin-left: 10px;
+}

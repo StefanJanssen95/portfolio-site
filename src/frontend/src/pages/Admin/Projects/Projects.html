@@ -3,11 +3,19 @@
   <form class="cover__form" id="form">
     <label for="name">Name:</label>
     <input class="input" type="text" id="name" placeholder="Name" v-model="name">
+
     <label for="description">Description:</label>
-    <textarea name="" id="description" v-model="description"></textarea>
+    <textarea class="input" name="" id="description" v-model="description"></textarea>
+
+    <label for="git">Git:</label>
+    <input class="input" type="text" id="git" placeholder="Git" v-model="git">
+
+    <label for="site">Site:</label>
+    <input class="input" type="text" id="site" placeholder="Site" v-model="site">
+
     <input class="input" type="file" id="image-upload">
 
-    <input class="input" type="button" value="Add Cover" @click="sendForm()">
+    <input class="input" type="button" value="Add Project" @click="sendForm()">
   </form>
   <hr>
   <table class="table">
@@ -15,18 +23,20 @@
     <tr class="table__row--head">
       <th class="table__cell">NAME</th>
       <th class="table__cell">LINKS</th>
+      <th class="table__cell">VISIBLE</th>
       <th class="table__cell table__cell--center table__cell--action">ACTIONS</th>
     </tr>
     </thead>
     <tbody>
-    <tr v-for="cover in covers" class="table__row--body" :id="'cover-'+cover.id">
-      <td class="table__cell">{{ cover.id }}</td>
-      <td class="table__cell">{{ cover.name }}</td>
+    <tr v-for="project in projects" class="table__row--body" :id="'project-'+project.id">
+      <td class="table__cell">{{ project.name }}</td>
       <td class="table__cell">
-        <img :src="cover.image_path" :alt="cover.name" class="cover-image">
+        <a :href="project.site" v-if="project.site"><span class="fa fa-globe"></span></a>
+        <a :href="project.git" v-if="project.git"><span class="fa fa-code-fork"></span></a>
       </td>
+      <td class="table__cell">{{ project.hidden ? "X" : "V" }}</td>
       <td class="table__cell table__cell--center">
-        <span class="btn btn--danger" @click="deleteCover(cover.id)">
+        <span class="btn btn--danger" @click="deleteProject(project.id)">
           <i class="fa fa-trash-o fa-lg"></i>
         </span>
       </td>

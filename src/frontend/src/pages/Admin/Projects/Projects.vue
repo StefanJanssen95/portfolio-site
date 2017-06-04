@@ -10,7 +10,8 @@
         name: '',
         description: '',
         git: '',
-        url: '',
+        site: '',
+        hidden: false,
         message: null,
         projects: [],
         deleting: [],
@@ -18,9 +19,17 @@
     },
     methods: {
       sendForm(){
-        this.axios.post( 'admin/project', {
+        const fileInput = document.querySelector( '#image-upload' );
+        const formData = new FormData();
 
-        } )
+        formData.append( 'image', fileInput.files[0] );
+        formData.append( 'name', this.name );
+        formData.append( 'description', this.description );
+        formData.append( 'git', this.git );
+        formData.append( 'site', this.site );
+        formData.append( 'hidden', this.hidden );
+
+        this.axios.post( 'admin/project', formData )
         .then( ( response ) => {
           this.projects.push( response.data );
         } )
@@ -28,7 +37,7 @@
           this.message = error.error;
         } );
       },
-      deleteCover( id ){
+      deleteProject( id ){
         if( !this.deleting.includes( id ) ){
           this.deleting.push( id );
           const row = document.getElementById( `project-${id}` );

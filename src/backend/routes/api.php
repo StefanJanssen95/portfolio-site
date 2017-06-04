@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/welcome/random', 'WelcomeTextController@get');
-Route::get('/projects/', 'ProjectController@all');
+Route::get('/projects/', 'ProjectController@allPublic');
 Route::get('/projects/{id}', 'ProjectController@get');
 
 Route::group(['prefix'=>'/blog'], function(){
@@ -50,5 +50,12 @@ Route::group(['prefix'=>'/admin', 'middleware'=>'auth:api'], function(){
 			Route::post('/{id}', 'CommentController@approve');
 			Route::delete('/{id}', 'CommentController@delete');
 		});
+	});
+	Route::group(['prefix'=>'/project'], function(){
+		Route::get('/', 'ProjectController@all');
+		Route::get('/{id}', 'ProjectController@get');
+
+		Route::post('/', 'ProjectController@store');
+		Route::delete('/{id}', 'ProjectController@delete');
 	});
 });

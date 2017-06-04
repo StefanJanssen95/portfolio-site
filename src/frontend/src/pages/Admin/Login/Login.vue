@@ -17,7 +17,7 @@
         // TODO: Set client secret to seperate file
         this.axios.post( 'https://localhost/oauth/token', {
           grant_type: 'password',
-          client_secret: 'ez8tcI28Du5EGwWNmzD4nwzlxdyIPJ6n7THLt1Fn',
+          client_secret: 'OJlBngBAee5NFTW7QmQVe281K8FecHHV3rrTkWjR',
           client_id: '1',
           username: this.email,
           password: this.password,

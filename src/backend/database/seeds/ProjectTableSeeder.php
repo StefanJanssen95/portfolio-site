@@ -16,7 +16,7 @@ class ProjectTableSeeder extends Seeder
 		    [
 			    "name" => "Portfolio website",
 			    "description" => "The website you are looking at right now.",
-			    "image" => "portfolio.png"
+			    "image" => "projects/portfolio.png"
 		    ],
 	    ];
     	foreach( $projects as $project ){
