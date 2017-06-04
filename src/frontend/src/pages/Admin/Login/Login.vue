@@ -7,8 +7,8 @@
     name: 'sj-admin-login',
     data(){
       return {
-        email: 'example@gmail.com',
-        password: 'test',
+        email: '',
+        password: '',
         message: '',
       };
     },
