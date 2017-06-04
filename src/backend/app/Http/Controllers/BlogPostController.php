@@ -35,7 +35,9 @@ class BlogPostController extends Controller {
 	}
 
 	static public function published() {
-		$published = BlogPost::with('blog_cover')->get()->where('publish_date', '<=', Carbon::now());
+		$published = BlogPost::with('blog_cover')->get()
+			->where('publish_date', '<=', Carbon::now())
+			->sortByDesc('publish_date')->values();
 		foreach( $published as $post ){
 			if( !is_null($post->blog_cover) ){
 				$post->blog_cover->asset_path = asset('storage/'.$post->blog_cover->image_path, true);
