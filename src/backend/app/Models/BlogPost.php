@@ -15,6 +15,10 @@ class BlogPost extends Model {
 
 	protected $dateFormat = "d-m-Y H:i";
 
+	public function getNameAttribute($value){
+		return strtoupper($value);
+	}
+
 	public function blog_cover(){
 		return $this->belongsTo(BlogCover::class);
 	}

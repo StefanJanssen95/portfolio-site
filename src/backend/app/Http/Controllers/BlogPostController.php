@@ -18,6 +18,8 @@ class BlogPostController extends Controller {
 
 	static public function get($id) {
 		$post = BlogPost::find($id);
+		$post->views++;
+		$post->save();
 		if ( Carbon::createFromFormat('Y-m-d H:i:s', $post['publish_date'])->isFuture() ) {
 			return response()->json(['error' => 'Page not found'], 404);
 		}
