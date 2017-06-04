@@ -16,7 +16,6 @@
     },
     methods: {
       sendForm(){
-        // TODO: Cleanup old formdata code
         const fileInput = document.querySelector( '#image-upload' );
         const formData = new FormData();
 
