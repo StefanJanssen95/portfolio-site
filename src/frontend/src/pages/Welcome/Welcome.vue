@@ -26,7 +26,7 @@ export default {
     },
   },
   created(){
-    this.axios.get( '/welcome/random' )
+    this.axios.get( '/welcome/random', { timeout: 3000 } )
       .then( ( response ) => {
         this.text = response.data.text;
         this.startTyping();

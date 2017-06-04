@@ -35,5 +35,16 @@ export default {
       return this.$route.name.split( '.' )[0];
     },
   },
+  methods:{
+    signOut(){
+      window.localStorage.removeItem( 'user' );
+      this.$router.push( '/' );
+    },
+    isSignedIn(){
+      const authUser = window.localStorage.getItem( 'user' );
+
+      return !!( authUser && JSON.parse( authUser ).jwt );
+    },
+  },
 };
 </script>

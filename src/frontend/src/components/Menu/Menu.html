@@ -9,9 +9,13 @@
       </router-link>
     </li>
   </ul>
-  <div class="nav__footer">
-    <a target="_blank" :href="'/linkedin'"><i class="fa fa-linkedin fa-2x"></i></a>
-    <a target="_blank" :href="'/github'"><i class="fa fa-github fa-2x"></i></a>
-    <a target="_blank" :href="'/gitlab'"><i class="fa fa-gitlab fa-2x"></i></a>
+  <div class="nav__footer" v-if="!isSignedIn()">
+    <a target="_blank" href="https://www.linkedin.com/in/stefanjanssenit/"><i class="fa fa-linkedin fa-2x"></i></a>
+    <a target="_blank" href="https://github.com/StefanJanssen95"><i class="fa fa-github fa-2x"></i></a>
+    <a target="_blank" href="https://gitlab.com/StefanJanssen95"><i class="fa fa-gitlab fa-2x"></i></a>
+  </div>
+  <div class="nav__footer" v-else>
+    <router-link to="/admin/dashboard"><i class="fa fa-tachometer fa-2x"></i></router-link>
+    <i class="fa fa-sign-out fa-2x clickable" @click="signOut"></i>
   </div>
 </nav>

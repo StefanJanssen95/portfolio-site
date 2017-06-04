@@ -72,15 +72,12 @@ const router = new Router( {
 
 router.beforeEach( ( to, from, next ) => {
   if( to.matched.some( ( record ) => record.meta.requiresAuth ) ){
-    const a = true;
+    const authUser = window.localStorage.getItem( 'user' );
 
-    if( a ){
-      next( {
-        path: '/admin/login',
-        query: { redirect: to.fullPath },
-      } );
-    }else{
+    if( authUser && JSON.parse( authUser ).jwt ){
       next();
+    }else{
+      next( { path: '/admin' } );
     }
   }else{
     next();

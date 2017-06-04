@@ -2,6 +2,7 @@
 <style scoped src="./PostEditor.scss"></style>
 
 <script>
+  import sjImageSelector from '@/components/ImageSelector/ImageSelector';
 
   export default {
     name: 'sj-admin-post-editor',
@@ -12,6 +13,9 @@
         markdown: '',
         publishDate: this.resetDate(),
         message: null,
+        covers: [{
+        }],
+        cover_id: 0,
       };
     },
     computed: {
@@ -31,11 +35,12 @@
     },
     methods: {
       sendForm(){
-        this.axios.post( '/blog', {
+        this.axios.post( 'admin/blog', {
           name: this.title,
           description: this.description,
           markdown: this.markdown,
-          publishDate: this.publishDate,
+          publish_date: this.publishDate,
+          blog_cover_id: this.cover_id,
         } )
         .then( ( response ) => {
           this.message = `Post (id: ${response.data.id}) has been added`;
@@ -62,6 +67,20 @@
 
         return dateString;
       },
+    },
+    created(){
+      this.axios.get( 'admin/blog/cover' )
+        .then( ( response ) => {
+          this.loadingStatus = 1;
+          this.covers = response.data;
+          this.cover_id = this.covers[0].id;
+        } )
+        .catch( () => {
+          this.loadingStatus = -1;
+        } );
+    },
+    components: {
+      sjImageSelector,
     },
   };
 </script>

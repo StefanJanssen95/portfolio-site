@@ -8,10 +8,6 @@ class BlogCover extends Model {
 
 	protected $fillable = [
 		'name',
-	    'image_path'
+		'image_path',
 	];
-
-	public function getImagePathAttribute($value){
-		return asset("/images/projects/$value", true);
-	}
 }

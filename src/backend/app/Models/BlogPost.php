@@ -15,8 +15,8 @@ class BlogPost extends Model {
 
 	protected $dateFormat = "d-m-Y H:i";
 
-	public function cover(){
-		return $this->hasOne(BlogCover::class);
+	public function blog_cover(){
+		return $this->belongsTo(BlogCover::class);
 	}
 
 	public function tags(){

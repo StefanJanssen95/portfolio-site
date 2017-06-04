@@ -21,6 +21,7 @@ class CreateBlogsTable extends Migration
         	$table->unsignedInteger('blog_cover_id')->nullable();
         	$table->string('markdown_path', 255);
         	$table->string('html_path', 255);
+        	$table->unsignedInteger('views')->default(0);
         	$table->dateTime('publish_date')->nullable();
 
 	        $table->foreign('blog_cover_id')->references('id')->on('blog_covers');

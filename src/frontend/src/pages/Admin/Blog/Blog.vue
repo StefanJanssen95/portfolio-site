@@ -5,6 +5,7 @@
   import sjTabGroup from '@/components/TabGroup/TabGroup';
   import sjManagePosts from '@/pages/Admin/Blog/ManagePosts/ManagePosts';
   import sjPostEditor from '@/pages/Admin/Blog/PostEditor/PostEditor';
+  import sjManageCovers from '@/pages/Admin/Blog/ManageCovers/ManageCovers';
 
   export default {
     name: 'sj-admin',
@@ -22,7 +23,7 @@
             component: '',
           }, {
             title: 'Manage Covers',
-            component: '',
+            component: sjManageCovers,
           },
         ],
       };

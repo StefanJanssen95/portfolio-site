@@ -18,15 +18,29 @@ Route::get('/projects/', 'ProjectController@all');
 Route::get('/projects/{id}', 'ProjectController@get');
 
 Route::group(['prefix'=>'/blog'], function(){
-	Route::get('/', 'BlogPostController@all');
-	Route::get('/published', 'BlogPostController@published');
+	Route::get('/', 'BlogPostController@published');
 	Route::get('{postId}/comments/', 'CommentController@getForPost');
 	Route::get('/{id}', 'BlogPostController@get');
-
-	Route::post('/', 'BlogPostController@store');
-	Route::delete('/{id}', 'BlogPostController@delete');
 });
 
 Route::group(['prefix'=>'/comment'], function(){
 	Route::post('/', 'CommentController@store');
+});
+
+Route::group(['prefix'=>'/admin', 'middleware'=>'auth:api'], function(){
+	Route::group(['prefix'=>'/blog'], function(){
+		Route::get('/', 'BlogPostController@all');
+		Route::get('/{id}', 'BlogPostController@get');
+
+		Route::post('/', 'BlogPostController@store');
+		Route::delete('/{id}', 'BlogPostController@delete');
+
+		Route::group(['prefix'=>'/cover'], function(){
+			Route::get('/', 'BlogPostController@allCovers');
+			Route::get('/{id}', 'BlogPostController@getCover');
+
+			Route::post('/', 'BlogPostController@storeCover');
+			Route::delete('/{id}', 'BlogPostController@deleteCover');
+		});
+	});
 });

@@ -20,9 +20,8 @@ export default {
     sjLoadingIcon,
   },
   created(){
-    this.axios.get( '/blog/published' )
+    this.axios.get( '/blog' )
     .then( ( response ) => {
-      console.log( response );
       this.posts = response.data.posts;
       this.status = 1;
     } )

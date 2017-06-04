@@ -5,6 +5,7 @@
         <th class="table__cell">ID</th>
         <th class="table__cell">TITLE</th>
         <th class="table__cell">PUBLISH DATE</th>
+        <th class="table__cell">NUMBER OF VIEWS</th>
         <th class="table__cell table__cell--center table__cell--action">ACTIONS</th>
       </tr>
     </thead>
@@ -13,6 +14,7 @@
         <td class="table__cell">{{ post.id }}</td>
         <td class="table__cell">{{ post.name }}</td>
         <td class="table__cell">{{ post.publish_date }}</td>
+        <td class="table__cell">{{ post.views }}</td>
         <td class="table__cell table__cell--spaced">
           <router-link :to="'/blog/'+post.id+'/'" target="_blank" class="btn btn--default">
             <i class="fa fa-book fa-lg"></i>

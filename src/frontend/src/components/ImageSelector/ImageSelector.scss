@@ -1,0 +1,55 @@
+@import "../../../static/scss/_import.scss";
+
+.select-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.option--selected{
+  background-color: $blanco;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.option:hover{
+  background-color: $blue-light-alt;
+}
+
+.select{
+  margin: 0;
+  background-color: $blanco;
+  display: inline-block;
+  width: 50%;
+  max-height: 175px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  top: 70px;
+  border: 1px solid black;
+  border-top: none;
+
+  > .option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.select--collapsed{
+  border: none;
+}
+
+.select--collapsed>.option {
+  display: none;
+}
+
+.post-cover{
+  height: 70px;
+  margin-right: 20px;
+}

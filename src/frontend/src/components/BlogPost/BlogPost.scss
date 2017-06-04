@@ -6,10 +6,13 @@
   flex-direction: row;
   margin-bottom: 20px;
   box-shadow: 1px 3px 5px 0 color($blue-dark alpha(60%));
+  height: 9.6em;
 
   &__link{
     color: $blue-dark;
     text-decoration: none;
+    padding: 20px;
+    display: block;
   }
 
   &__cover{
@@ -18,8 +21,6 @@
   }
   &__data{
     position: relative;
-    height: 9.6em;
-    padding: 20px 20px;
     flex-grow: 1;
     overflow: hidden;
 

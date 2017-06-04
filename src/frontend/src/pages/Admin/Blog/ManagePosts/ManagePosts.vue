@@ -20,7 +20,7 @@
         deleteIcon.classList.toggle( 'fa-spin' );
         deleteIcon.classList.toggle( 'fa-refresh' );
 
-        this.axios.delete( `/blog/${id}` )
+        this.axios.delete( `admin/blog/${id}` )
         .then( ( ) => {
           row.parentElement.removeChild( row );
         } )
@@ -34,7 +34,7 @@
       },
     },
     created(){
-      this.axios.get( '/blog/' )
+      this.axios.get( 'admin/blog/' )
       .then( ( response ) => {
         this.status = 1;
         this.posts = response.data;

@@ -33,6 +33,10 @@ export default {
   .no-select{
     user-select: none;
   }
+
+  .clickable{
+    cursor: pointer;
+  }
 </style>
 
 

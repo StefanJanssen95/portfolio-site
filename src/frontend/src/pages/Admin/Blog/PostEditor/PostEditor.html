@@ -7,6 +7,11 @@
     <label for="description">Description:</label>
     <textarea class="input" id="description" placeholder="Description" rows="4" v-model="description"></textarea>
 
+    <template v-if="covers.length>0">
+      <label>Post Cover:</label>
+      <sj-image-selector name="post_cover_id" :options="covers" v-model.number="cover_id"></sj-image-selector>
+    </template>
+
     <div>
       <label for="markdown">Markdown:</label>
       <span class="input-warning">{{ markdownWarning }}</span>
