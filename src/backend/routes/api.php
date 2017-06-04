@@ -42,5 +42,13 @@ Route::group(['prefix'=>'/admin', 'middleware'=>'auth:api'], function(){
 			Route::post('/', 'BlogPostController@storeCover');
 			Route::delete('/{id}', 'BlogPostController@deleteCover');
 		});
+
+		Route::group(['prefix'=>'/comment'], function(){
+			Route::get('/approved/0', 'CommentController@allNotApproved');
+			Route::get('/approved/1', 'CommentController@allApproved');
+
+			Route::post('/{id}', 'CommentController@approve');
+			Route::delete('/{id}', 'CommentController@delete');
+		});
 	});
 });

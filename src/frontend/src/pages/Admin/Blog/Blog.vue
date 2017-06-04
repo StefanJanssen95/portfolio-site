@@ -6,6 +6,7 @@
   import sjManagePosts from '@/pages/Admin/Blog/ManagePosts/ManagePosts';
   import sjPostEditor from '@/pages/Admin/Blog/PostEditor/PostEditor';
   import sjManageCovers from '@/pages/Admin/Blog/ManageCovers/ManageCovers';
+  import sjManageComments from '@/pages/Admin/Blog/ManageComments/ManageComments';
 
   export default {
     name: 'sj-admin',
@@ -24,6 +25,9 @@
           }, {
             title: 'Manage Covers',
             component: sjManageCovers,
+          }, {
+            title: 'Manage Comments',
+            component: sjManageComments,
           },
         ],
       };
