@@ -1,15 +1,16 @@
 <div class="form__container">
+  <span v-if="result">{{ result }}</span>
   <div class="form__item">
     <label for="name">Name: </label>
-    <input type="text" v-model="authorName" placeholder="name" id="name">
+    <input class="input" type="text" v-model="authorName" placeholder="Name" id="name">
   </div>
   <div class="form__item">
     <label for="email">Email: </label>
-    <input type="text" v-model="authorEmail" placeholder="email" id="email">
+    <input class="input" type="text" v-model="authorEmail" placeholder="Email" id="email">
   </div>
   <div class="form__item">
     <label for="Message">Message: </label>
-    <textarea v-model="text" placeholder="message" id="message" class="textarea"></textarea>
+    <textarea v-model="text" placeholder="Message" id="message" class="input textarea"></textarea>
   </div>
-  <input type="button" value="Place Comment" @click="sendComment">
+  <input class="input" type="button" value="Place Comment" @click="sendComment">
 </div>

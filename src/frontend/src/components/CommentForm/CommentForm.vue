@@ -5,9 +5,9 @@ export default {
   name: 'sj-comment-form',
   data(){
     return {
-      authorName: 'test',
-      authorEmail: 'test@test.test',
-      text: 'Dit is een standaardtest in CommentForm.vue',
+      authorName: '',
+      authorEmail: '',
+      text: '',
       result: '',
     };
   },
@@ -26,6 +26,9 @@ export default {
         message: this.text,
       } )
       .then( ( response ) => {
+        this.authorName = '';
+        this.authorEmail = '';
+        this.text = '';
         this.result = 'Message has been received. It has to be approved before it will show up.';
         if( response.data.comment.approved ){
           this.result = 'Message has been approved, refresh to see it.';
