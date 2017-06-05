@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class CommentController extends Controller {
 
 	static public function getForPost( $postId ){
-		return response()->json( ['comments' => Comment::all()
-			->where('post_id', $postId)
+		return response()->json( ['comments' => Comment::where('post_id', $postId)
 			->where('comment_parent', null)
 			->where('approved', 1)
+            ->get(['author_name', 'datetime', 'message'])
         ] );
 	}
 
@@ -42,7 +42,7 @@ class CommentController extends Controller {
 
 	static public function store(Request $request){
 		$comment = new Comment( $request->toArray() );
-		// TODO: Approve if user is signed in (so admin)
+	//      TODO: Approve if user is signed in (so admin)
 //		if( Auth::user() ){
 //			$comment->approved = 1;
 //			$comment->notify_approval = 0;

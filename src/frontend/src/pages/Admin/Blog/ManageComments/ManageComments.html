@@ -14,7 +14,7 @@
         <td class="table__cell">{{ comment.author_email }}</td>
         <td class="table__cell">{{ comment.message }}</td>
         <td class="table__cell table__cell--spaced">
-          <span class="btn btn--danger" @click="approveComment(comment.id)">
+          <span class="btn btn--success" @click="approveComment(comment.id)">
             <i class="fa fa-check fa-lg"></i>
           </span>
           <span class="btn btn--danger" @click="deleteComment(comment.id)">

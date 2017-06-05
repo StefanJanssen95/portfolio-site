@@ -25,25 +25,32 @@ export default {
     sjComment,
     sjCommentForm,
   },
+  methods:{
+    retrievePost(){
+      this.postId = parseInt( this.postId, 10 );
+      this.axios.get( `/blog/${this.postId}` )
+      .then( ( response ) => {
+        this.post = response.data.post;
+        this.statusPost = 1;
+        this.retrieveComment();
+      } )
+      .catch( () => {
+        this.statusPost = -1;
+      } );
+    },
+    retrieveComment(){
+      this.axios.get( `/blog/${this.postId}/comments/` )
+        .then( ( response ) => {
+          this.comments = response.data.comments;
+          this.statusComments = 1;
+        } )
+        .catch( () => {
+          this.statusComments = -1;
+        } );
+    },
+  },
   created(){
-    this.postId = parseInt( this.postId, 10 );
-    this.axios.get( `/blog/${this.postId}` )
-    .then( ( response ) => {
-      this.post = response.data.post;
-      this.statusPost = 1;
-    } )
-    .catch( () => {
-      this.statusPost = -1;
-    } );
-
-    this.axios.get( `/blog/${this.postId}/comments/` )
-    .then( ( response ) => {
-      this.comments = response.data.comments;
-      this.statusComments = 1;
-    } )
-    .catch( () => {
-      this.statusComments = -1;
-    } );
+    this.retrievePost();
   },
 };
 </script>

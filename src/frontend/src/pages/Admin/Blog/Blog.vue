@@ -20,9 +20,6 @@
             title: 'Add Post',
             component: sjPostEditor,
           }, {
-            title: 'Manage Tags',
-            component: '',
-          }, {
             title: 'Manage Covers',
             component: sjManageCovers,
           }, {
