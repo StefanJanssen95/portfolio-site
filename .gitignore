@@ -24,5 +24,6 @@ src/frontend/yarn-error.log*
 portfolio_laradock/logs
 
 .idea/
+.idea
 npm-debug.log
 data

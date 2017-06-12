@@ -24,6 +24,7 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
+    "linebreak-style": 0,
     "comma-dangle": [2,"always-multiline"],
     "no-cond-assign": [2,"except-parens"],
     "no-constant-condition": 2,
