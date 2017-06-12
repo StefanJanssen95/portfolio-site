@@ -1,0 +1,26 @@
+.ps{
+	.command{
+		color: rgb(204, 204, 0);
+	}
+	.comment{
+		color: rgb(152, 251, 152);
+	}
+	.keyword{
+		font-weight: bold;
+	}
+	.number{
+		color: rgb(128, 0, 128);
+	}
+	.operator{
+		color: rgb(211, 211, 211);
+	}
+	.string{
+		color: rgb(219, 211, 147);
+	}
+	.type{
+		color: rgb(143, 188, 143);
+	}
+	.variable{
+		color: rgb(255, 69, 0);
+	}
+}

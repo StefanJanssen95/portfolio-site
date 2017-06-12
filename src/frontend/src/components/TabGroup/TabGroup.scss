@@ -1,0 +1,28 @@
+@import "../../../static/scss/_import.scss";
+
+.tab {
+  &__container {
+    width: 100%;
+  }
+  &__group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  &__item {
+    background-color: $purple-light;
+    color: $blanco;
+    @mixin roboto $bold 24px;
+
+    padding: 10px;
+    margin-right: 2px;
+
+    &:last-child{
+      margin: 0;
+    }
+
+    &--active {
+      background-color: $purple-dark;
+    }
+  }
+}

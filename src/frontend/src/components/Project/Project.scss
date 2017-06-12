@@ -1,0 +1,44 @@
+@import "../../../static/scss/_import.scss";
+
+.project{
+  width: 250px;
+  height: 180px;
+  margin: 20px;
+  overflow: hidden;
+  background-color: $blue-main;
+  color: $blanco;
+  position: relative;
+
+  &__title{
+    margin: 0;
+  }
+
+  &__details{
+    display: none;
+    padding: 10px;
+  }
+  &__image{
+    max-height: 100%;
+  }
+
+  &:hover{
+    .project__details{
+      display: block;
+    }
+    .project__image{
+      display: none;
+    }
+  }
+}
+
+.link-box{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.icon-link{
+  color: $blanco;
+  font-size: 20px;
+  margin-left: 10px;
+}

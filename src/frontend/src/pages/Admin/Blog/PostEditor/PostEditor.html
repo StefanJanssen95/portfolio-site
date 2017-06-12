@@ -1,0 +1,29 @@
+<div>
+  {{ message }}
+  <form class="post__form">
+    <label for="title">Title:</label>
+    <input class="input" type="text" id="title" placeholder="Title" v-model="title">
+
+    <label for="description">Description:</label>
+    <textarea class="input" id="description" placeholder="Description" rows="4" v-model="description"></textarea>
+
+    <template v-if="covers.length>0">
+      <label>Post Cover:</label>
+      <sj-image-selector name="post_cover_id" :options="covers" v-model.number="cover_id"></sj-image-selector>
+    </template>
+
+    <div>
+      <label for="markdown">Markdown:</label>
+      <span class="input-warning">{{ markdownWarning }}</span>
+    </div>
+    <textarea class="input" id="markdown" placeholder="Markdown" rows="10" v-model="markdown"></textarea>
+
+    <div>
+      <label for="publish-date">Publish date:</label>
+      <span class="input-warning">{{ dateWarning }}</span>
+    </div>
+    <input class="input" type="datetime-local" id="publish-date" :value='publishDate' v-model="publishDate">
+
+    <input class="input button btn--success" type="button" value="Add Post" @click="sendForm()">
+  </form>
+</div>

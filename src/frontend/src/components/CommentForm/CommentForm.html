@@ -1,0 +1,16 @@
+<div class="form__container">
+  <span v-if="result">{{ result }}</span>
+  <div class="form__item">
+    <label for="name">Name: </label>
+    <input class="input" type="text" v-model="authorName" placeholder="Name" id="name">
+  </div>
+  <div class="form__item">
+    <label for="email">Email: </label>
+    <input class="input" type="text" v-model="authorEmail" placeholder="Email" id="email">
+  </div>
+  <div class="form__item">
+    <label for="Message">Message: </label>
+    <textarea v-model="text" placeholder="Message" id="message" class="input textarea"></textarea>
+  </div>
+  <input class="input" type="button" value="Place Comment" @click="sendComment">
+</div>

@@ -1,0 +1,25 @@
+@import "../../../../static/scss/_import.scss";
+
+.page__container--login{
+  margin: auto;
+  padding: 50px;
+  width: 500px;
+  background-color: $blanco;
+  @mixin roboto;
+}
+
+.input{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+
+  &--button{
+    margin-top: 20px;
+  }
+}
+
+.login-container__title{
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}

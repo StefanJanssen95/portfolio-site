@@ -1,0 +1,34 @@
+@import "../../../static/scss/_import.scss";
+
+.page__container--error{
+  background-image: url("../../../static/img/background_typing.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.typewriter__title{
+  @mixin roboto $light 45px;
+  color: $blanco;
+  max-width: 1000px;
+  text-align: center;
+
+  &--bold{
+    @mixin roboto $bold 45px;
+    &:after{
+      content: "|";
+      animation: blinker 0.8s linear infinite;
+    }
+  }
+
+}
+
+@keyframes blinker {
+  0% { opacity: 1;}
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  99% { opacity: 0; }
+}

@@ -1,0 +1,20 @@
+@import "../../../static/scss/_import.scss";
+.page__container--project{
+  max-width: 1000px;
+  min-width: 500px;
+  width: 100%;
+  @mixin roboto $regular;
+  padding: 0 60px 60px 60px;
+}
+
+.project{
+
+  &__container{
+    width: 100%;
+    min-height: calc(100% - 250px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}

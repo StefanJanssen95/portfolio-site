@@ -1,0 +1,104 @@
+@import "./_hljs.scss";
+
+/* Based on: Android Studio styling by Pedro Oliveira */
+
+code{
+  display: inline-block;
+  padding: 2px 4px;
+  margin: 1px 0;
+  font-family: "Lucida Console",monospace;
+  font-size: 0.9em;
+
+  color: $hljsBackground;
+  background: $hljsColor;
+}
+
+.hljs {
+  color: $hljsColor;
+  background: $hljsBackground;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+}
+
+.hljs-number{
+  color: $hljsNumberColor;
+}
+.hljs-literal{
+  color: $hljsLiteralColor;
+},
+.hljs-symbol{
+  color: $hljsSymbolColor;
+}
+.hljs-bullet {
+  color: $hljsBulletColor;
+}
+
+.hljs-keyword{
+  color: $hljsKeyword;
+}
+.hljs-selector-tag{
+  color: $hljsSelectorTag;
+}
+.hljs-deletion {
+  color: $hljsDeletion;
+}
+
+.hljs-variable{
+  color: $hljsVariable;
+}
+.hljs-template-variable{
+  color: $hljsTemplateVariable;
+}
+.hljs-link {
+  color: $hljsLink;
+}
+
+.hljs-comment{
+  color: $hljsComment;
+}
+.hljs-quote {
+  color: $hljsQuote;
+}
+
+.hljs-meta {
+  color: $hljsMeta;
+}
+
+.hljs-string{
+  color: $hljsString;
+}
+.hljs-attribute{
+  color: $hljsAttribute;
+}
+.hljs-addition {
+  color: $hljsAddition;
+}
+
+.hljs-section{
+  color: $hljsSection;
+}
+.hljs-title{
+  color: $hljsTitle;
+}
+.hljs-type {
+  color: $hljsType;
+}
+
+.hljs-name{
+  color: $hljsName;
+}
+.hljs-selector-id{
+  color: $hljsSelectorId;
+}
+.hljs-selector-class {
+  color: $hljsSelectorClass;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+<span class="select-container">
+  <span class="no-select clickable option--selected" @click="toggleList">
+      <img :src="options[selected].image_path" alt="" class="post-cover">
+      {{ options[selected].name }}
+  </span>
+  <ul class="no-select clickable select select--collapsed" @click="toggleList">
+    <li v-for="(option, index) in options" :key="index" class="option" @click="select(index)">
+      <img :src="option.image_path" alt="" class="post-cover">
+      {{ option.name }}
+    </li>
+  </ul>
+</span>

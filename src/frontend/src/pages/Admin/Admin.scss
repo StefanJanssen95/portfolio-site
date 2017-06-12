@@ -1,0 +1,21 @@
+@import "../../../static/scss/_import.scss";
+
+.page__container--admin{
+  max-width: 1000px;
+  min-width: 500px;
+  width: 100%;
+  padding: 0 60px 60px 60px;
+}
+
+.button__back{
+  text-decoration: none;
+  @mixin roboto $bold;
+  color: $blanco;
+  background-color: $blue-main;
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  &:hover{
+    background-color: $blue-dark;
+  }
+}

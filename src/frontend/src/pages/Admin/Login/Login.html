@@ -1,0 +1,7 @@
+<div class="page__container--login">
+  <h3 class="login-container__title">LOGIN</h3>
+  <span v-if="message">{{ message }}</span>
+  <input type="text" placeholder="Email" class="input" v-model="email">
+  <input type="password" placeholder="Password" class="input" v-model="password">
+  <input type="button" value="Login" class="input input--button button btn--success" @click="login">
+</div>

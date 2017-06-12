@@ -1,0 +1,41 @@
+@import "../../../static/scss/_import.scss";
+
+.post{
+  background-color: $blanco;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  box-shadow: 1px 3px 5px 0 color($blue-dark alpha(60%));
+  height: 9.6em;
+
+  &__link{
+    color: $blue-dark;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+  }
+
+  &__cover{
+    min-width: 200px;
+    width: 200px;
+  }
+  &__data{
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+
+  }
+  &__title{
+    margin: 0;
+  }
+  &__description{
+    line-height: 1.2em;
+    height: 4.8em;
+    overflow: hidden;
+  }
+  &__date{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}

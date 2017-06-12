@@ -1,0 +1,6 @@
+<div class="tab__container">
+    <div class="tab__group">
+        <div v-for="(tab, key) in tabs" class="tab__item" :class="{'tab__item--active': activeTab===key}" @click="setActiveTab(key)">{{ tab.title }}</div>
+    </div>
+    <component :is="tabs[activeTab].component" class="tab__view"></component>
+</div>

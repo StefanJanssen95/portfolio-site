@@ -1,0 +1,8 @@
+<div class="page__container--project">
+  <sj-ribbon title="PROJECTS" icon="code-fork"></sj-ribbon>
+  <div class="project__container">
+    <sj-loading-icon v-if="status === 0"></sj-loading-icon>
+    <p v-else-if="status === -1">Something went wrong while retrieving my projects, please try again or take a look at my github</p>
+    <sj-project v-else v-for="(project, index) in projects" :project="project" :key="index"></sj-project>
+  </div>
+</div>

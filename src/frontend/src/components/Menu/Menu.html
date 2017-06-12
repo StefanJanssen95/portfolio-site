@@ -1,0 +1,21 @@
+<nav class="nav no-select">
+  <div class="nav__img"></div>
+  <div class="nav__name">STEFAN JANSSEN</div>
+  <ul class="nav__list">
+    <li v-for="menuItem in menuItems" class="nav__item" :class="[ currentPage===menuItem.name ? 'nav__item--selected' : '']">
+      <router-link :to="menuItem.to" class="nav__tab">
+        <i class="fa fa-2x" :class="'fa-'+menuItem.icon"></i>
+        {{ menuItem.text }}
+      </router-link>
+    </li>
+  </ul>
+  <div class="nav__footer" v-if="!isSignedIn()">
+    <a target="_blank" href="https://www.linkedin.com/in/stefanjanssenit/"><i class="fa fa-linkedin fa-2x"></i></a>
+    <a target="_blank" href="https://github.com/StefanJanssen95"><i class="fa fa-github fa-2x"></i></a>
+    <a target="_blank" href="https://gitlab.com/StefanJanssen95"><i class="fa fa-gitlab fa-2x"></i></a>
+  </div>
+  <div class="nav__footer" v-else>
+    <router-link to="/admin/dashboard"><i class="fa fa-tachometer fa-2x"></i></router-link>
+    <i class="fa fa-sign-out fa-2x clickable" @click="signOut"></i>
+  </div>
+</nav>

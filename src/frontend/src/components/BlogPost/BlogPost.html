@@ -1,0 +1,10 @@
+<article class="post">
+  <img :src="post.blog_cover.asset_path" alt="" class="post__cover" v-if="post.blog_cover">
+  <div class="post__data">
+    <router-link class="post__link" :to="postUrl">
+      <h4 class="post__title">{{ post.name }}</h4>
+      <p class="post__description">{{ post.description }}</p>
+      <time class="post__date" :datetime="post.publish_date" pubdate>{{ dateString }}</time>
+    </router-link>
+  </div>
+</article>

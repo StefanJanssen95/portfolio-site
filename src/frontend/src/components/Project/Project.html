@@ -1,0 +1,11 @@
+<div class="project">
+  <div class="project__details">
+    <h4 class="project__title">{{ project.name }}</h4>
+    <p class="project__description">{{ project.description }}</p>
+    <div class="link-box">
+      <a target="_blank" :href="project.site" v-if="project.site" class="icon-link"><span class="fa fa- fa-globe"></span></a>
+      <a target="_blank" :href="project.git" v-if="project.git" class="icon-link"><span class="fa fa-lg fa-code-fork"></span></a>
+    </div>
+  </div>
+  <img v-if="project.image" :src="project.image" class="project__image">
+</div>

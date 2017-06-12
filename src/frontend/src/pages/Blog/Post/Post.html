@@ -1,0 +1,15 @@
+<div class="page__container--post">
+  <sj-ribbon :title="post.name" icon="comment"></sj-ribbon>
+  <div class="blog__container">
+    <sj-loading-icon v-if="statusPost === 0"></sj-loading-icon>
+    <p v-else-if="statusPost === -1">Something went wrong while retrieving the post, please try again later.</p>
+    <div v-html="post.html" class="post__content"></div>
+    <section class="comments" v-if="statusComments===1">
+      <hr>
+      <sj-ribbon title="COMMENTS" icon="comment"></sj-ribbon>
+      <sj-comment v-for="comment in comments" :key="comment.id" :comment="comment"></sj-comment>
+      <hr>
+      <sj-comment-form :postId="postId"></sj-comment-form>
+    </section>
+  </div>
+</div>

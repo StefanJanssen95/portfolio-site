@@ -1,4 +1,7 @@
-﻿function PascalName($name){
+﻿# Written by: Stuart Leeks
+# Source:   : https://blogs.msdn.microsoft.com/stuartleeks/2015/12/01/working-with-docker-output-in-powershell/
+
+function PascalName($name){
     $parts = $name.Split(" ")
     for($i = 0 ; $i -lt $parts.Length ; $i++){
         $parts[$i] = [char]::ToUpper($parts[$i][0]) + $parts[$i].SubString(1).ToLower();
@@ -74,3 +77,4 @@ function ConvertFrom-Docker(){
     end {
     }
 }
+export-modulemember -function ConvertFrom-Docker

@@ -1,0 +1,17 @@
+@import "../../../../static/scss/_import.scss";
+@import "../../../../static/scss/_table.scss";
+
+.page__container--post{
+  max-width: 1000px;
+  min-width: 500px;
+  width: 100%;
+  @mixin roboto $regular;
+  padding: 0 60px 60px 60px;
+}
+
+.post__content{
+  & img{
+    width: 100%;
+    margin: 5px 0 20px;
+  }
+}
