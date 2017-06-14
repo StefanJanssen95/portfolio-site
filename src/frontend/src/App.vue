@@ -30,6 +30,11 @@ export default {
   *{
     box-sizing: border-box;
   }
+
+  body{
+    overflow-x: hidden;
+  }
+
   .no-select{
     user-select: none;
   }
@@ -54,6 +59,6 @@ export default {
     justify-content: center;
 
     background-color: $blue-light;
-    overflow-y: scroll
+    overflow-y: none;
   }
 </style>

@@ -148,8 +148,8 @@ services:
         - ./data/certbot/certs/:/var/certs
         - ./certbot/letsencrypt/:/var/www/letsencrypt
       environment:
-        - CN="fake.domain.com"
-        - EMAIL="fake.email@gmail.com"
+        - CN="stefanjanssen.nl"
+        - EMAIL="stefanjanssen@outlook.com"
       networks:
         - frontend
 
