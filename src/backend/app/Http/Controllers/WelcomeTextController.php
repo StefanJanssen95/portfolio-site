@@ -8,7 +8,7 @@ class WelcomeTextController extends Controller {
 	static public function get(){
 		// TODO: Decide to use a '.', '!' or randomly selected ending.
 		return response()->json(
-			WelcomeText::all()
+			WelcomeText::select(['text'])->get()->pluck(['text'])->toArray()
 		);
 	}
 }
