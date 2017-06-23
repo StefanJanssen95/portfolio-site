@@ -43,6 +43,10 @@
     justify-content: space-around;
 
     height: 94px;
+    @media (max-height: 700px){
+      height: auto;
+    }
+
 
     &:hover,
     &--selected {
@@ -63,16 +67,27 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-height: 700px){
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 10px;
+
+      .fa{
+        width: 1.7em;
+        font-size: 1.6em;
+      }
+    }
   }
 
   &__footer{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
 
-    margin: 30px;
-    height: 120px;
+    margin-bottom: 30px;
+    padding: 0 15%;
     position: absolute;
     bottom: 0;
     left: 0;
