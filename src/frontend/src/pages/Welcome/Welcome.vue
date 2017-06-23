@@ -10,10 +10,13 @@ export default {
       typedText: '',
       maxDuration: 1500,
       maxDelayPerLetter: 500,
+      texts: [],
+      textIndex: 0,
     };
   },
   methods: {
     startTyping(){
+      this.text = this.texts[this.textIndex];
       const delay = Math.min( this.maxDuration / this.text.length, this.maxDelayPerLetter );
       const self = this;
       const interval = window.setInterval( () => {
@@ -21,18 +24,36 @@ export default {
         self.text = self.text.substr( 1 );
         if( self.text.length === 0 ){
           clearInterval( interval );
+          if( self.texts.length > 1 ){
+            self.textIndex++;
+            if( self.textIndex >= self.texts.length ){ self.textIndex = 0; }
+            window.setTimeout( self.clearTypedText, 2000 );
+          }
         }
       }, delay );
     },
+    clearTypedText(){
+      if( this.typedText.length > 0 ){
+        const interval = window.setInterval( () => {
+          this.typedText = this.typedText.slice( 0, -1 );
+          if( this.typedText.length === 0 ){
+            clearInterval( interval );
+            window.setTimeout( this.startTyping, 1000 );
+          }
+        }, 50 );
+      }
+    },
   },
   created(){
-    this.axios.get( '/welcome/random', { timeout: 3000 } )
+    this.axios.get( '/welcome', { timeout: 3000 } )
       .then( ( response ) => {
-        this.text = response.data.text;
+        this.texts = response.data.text;
+        this.textIndex = Math.floor( Math.random() * this.texts.length );
         this.startTyping();
       } )
       .catch( () => {
-        this.text = 'a full-stack developer.';
+        this.texts = ['a full-stack developer.'];
+        this.textIndex = 0;
         this.startTyping();
       } );
   },

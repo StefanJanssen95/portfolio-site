@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/welcome/random', 'WelcomeTextController@get');
+Route::get('/welcome/', 'WelcomeTextController@get');
 Route::get('/projects/', 'ProjectController@allPublic');
 Route::get('/projects/{id}', 'ProjectController@get');
 
