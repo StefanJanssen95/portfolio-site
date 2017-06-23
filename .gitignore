@@ -22,6 +22,7 @@ src/frontend/yarn-error.log*
 
 
 portfolio_laradock/logs
+portfolio_laradock/.env
 
 .idea/
 .idea

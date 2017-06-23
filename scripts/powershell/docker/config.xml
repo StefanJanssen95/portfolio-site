@@ -4,7 +4,7 @@
         <Container>caddy</Container>
         <Container>mysql</Container>
     </Containers>
-    <ContainerPrefix>portfoliolaradock</ContainerPrefix>
-    <DockerComposeLocation>../../../portfolio_laradock</DockerComposeLocation>
+    <ContainerPrefix>portfolio-docker</ContainerPrefix>
+    <DockerComposeLocation>../../../portfolio-docker</DockerComposeLocation>
     <AfterDoneLocation>../../../</AfterDoneLocation>
 </Settings>
